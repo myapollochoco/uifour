@@ -1,0 +1,213 @@
+:root {
+	--body: hsl(0, 0%, 95%);
+	--border-thin: hsla(0, 0%, 0%, 0.12);
+	--card-body: hsl(0, 0%, 100%);
+	--text-color-strong: hsl(0, 0%, 13%);
+	--text-color-strong-reverse: hsl(0, 0%, 100%);
+	--text-color-medium: hsl(0, 0%, 43%);
+	--bg-color-200: hsla(0, 0%, 18%, 0.104);
+	--button-blur: hsla(0, 0%, 0%, 0.322);
+	
+	/* button */
+	--button-main: hsl(0, 0%, 14%);
+	--button-ghost: hsl(0, 0%, 91%);
+}
+[data-theme="dark"] {
+	--body: hsl(0, 0%, 11%);
+	--border-thin: hsla(0, 0%, 100%, 0.123);
+	--card-body: hsl(0, 0%, 21%);
+	--text-color-strong: hsl(0, 0%, 87%);
+	--text-color-strong-reverse: hsl(0, 0%, 14%);
+	--text-color-medium: hsl(0, 0%, 63%);
+	--bg-color-200: hsla(0, 0%, 96%, 0.087);
+	--button-blur: hsla(0, 0%, 52%, 0.322);
+
+	/* button */
+	--button-main: hsl(0, 0%, 91%);
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body{
+	font-family: Inter;
+	letter-spacing: -.5px;
+	font-size: 13px;
+	background-color: var(--body);
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+h1{
+	font-size: 20px;
+	line-height: 24px;
+}
+
+
+
+.container{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	/*background: url('bg.jpg');*/
+	background-size: cover;
+	background-position: center;
+	/*background-color: green;*/
+	/*align-content: center;*/
+	/*align-items: center;*/
+}
+
+.main{
+	background-color: var(--card-body);
+	padding: 16px;
+	border-radius: 28px;
+	border: 1px solid var(--border-thin) ;
+}
+
+.main_head{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.main_head_left a{
+	padding: 4px 12px;
+	border: 1px solid var(--border-thin);
+	border-radius: 88px;
+	color: var(--text-color-strong);
+}
+.online_status{
+	background-color: #e9f9f8;
+	color: black;
+	padding: 4px 12px;
+	border-radius: 88px;
+	display: flex;
+	align-items: center;
+}
+.online_status div{
+	width: 10px;
+	border-radius: 33px;
+	height: 10px;
+	background-color: #18e349;
+	margin-right: 4px;
+}
+
+.main_content{
+	display: flex;
+	flex-direction: column;
+	margin-top: 16px;
+}
+.main_content_pics{
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	position: relative;
+}
+.main_content_pics_cta{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 0px;
+	/*background-color: blue;*/
+}
+.main_content_pics_cta a{
+	display: flex;
+	width: fit-content;
+	color: white;
+	/*position: absolute;*/
+	/*left: 50%;*/
+	/*right: 50%;*/
+	/*bottom: 0;*/
+	padding: 8px 16px;
+	backdrop-filter: blur(8px);
+    background-color: var(--button-blur);
+	z-index: 8;
+	transform: translateY(-24px);
+	border-radius: 80px;
+}
+.main_content_pics img	{
+	position: relative;
+	width: 100px;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	border-radius: 16px;
+	border: 3px solid var(--card-body);
+	box-shadow: 0px 4px 6px hsl(0deg 0% 0% / 12%);
+}
+.zi-2{
+	z-index: 2;
+}
+.pic_left{
+	transform: translate(40px, 8px);
+    scale: .85;
+    rotate: -6deg;
+}
+.pic_right{
+	transform: translate(-40px, 8px);
+    scale: .85;
+    rotate: 6deg;
+}
+
+
+.main_content_titles{
+	display: flex;
+	flex-direction: column;
+}
+.main_content_titles h1{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	color: var(--text-color-strong);
+}
+.main_content_titles p{
+	text-align: center;
+	font-size: 16px;
+	color: var(--text-color-medium);
+}
+
+
+.main_content_meta{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	margin-top: 16px;
+}
+.meta{
+	background-color: var(--bg-color-200);
+	border-radius: 40px;
+	padding: 4px 12px;
+	color: var(--text-color-medium);
+	cursor: pointer;
+}
+
+
+.main_foot{
+	display: flex;
+	gap: 16px;
+	margin-top: 20px;
+}
+.main_foot button{
+	width: 100%;
+	padding: 12px;
+	border-radius: 55px;
+	/*border:none;*/
+	font-size: 16px;
+}
+.btn_ghost{
+	border: 1px solid var(--border-thin);
+	background-color: var(--card-body);
+	color: var(--text-color-strong);
+	cursor: pointer;
+}
+.btn_main{
+	background-color: var(--button-main);
+	color: white;
+	border: 1px solid var(--button-main); 
+	color: var(--text-color-strong-reverse);
+	cursor: pointer;
+}
